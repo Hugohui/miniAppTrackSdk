@@ -6,7 +6,7 @@ import versionConfig from '@/common/version_config'
 (function(){
     var config = require('./sd-stat-conf.js');
     /* 公共 */
-    const DEBUG_MODE = versionConfig.miniProgram.environment == 'test'?1:0; // 1 debug模式；0 正常统计模式
+    const DEBUG_MODE = 1; // 1 debug模式；0 正常统计模式
     const store = getStore(); // 状态
     let user_id = store.getState().user.userInfo1._id;
     let events = {}; // 上报事件
@@ -92,7 +92,7 @@ import versionConfig from '@/common/version_config'
           events.device_id =  store.getState().system.deviceId || '';
           let params = JSON.stringify(event);
           wepy.request({
-              url: 'https://minapp-log.liquidnetwork.com/minapp/saisai_report.gif',
+              url: 'xxxx',
               method: 'POST',
               data: params,
               header: { 'Content-Type': 'application/json' },
